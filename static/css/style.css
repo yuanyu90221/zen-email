@@ -13,7 +13,10 @@
   margin-right: 5px;
 }
 
-
+.marginLeft_10px {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 background {
   transition-duration: 2000ms;
 }

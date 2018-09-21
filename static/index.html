@@ -16,68 +16,95 @@
 <body class="background_black">
   <!-- outer container -->
   <div class="container">
+    <!-- main page start -->
     <div class="row">
+        <!-- rwd start -->
         <div class="col-xl-8 offset-xl-2 py-5">
+            <!-- <nav class="navbar navbar-light">   
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </nav> -->
+            <!-- content head -->
             <p class="lead color_white" name="head_title">Normal Mail</p>
+            <!-- radio groups start -->
             <div class="controls">
                 <label class="radio-inline color_white"><input class="marginLeft_5px" type="radio" name="mailFormat" checked value="normal">normal</label>
                 <label class="radio-inline color_white"><input class="marginLeft_5px" type="radio" name="mailFormat" value="crypto">crypto</label>
             </div>
+            <!-- radio groups end -->
+            <!-- form start -->
             <form id="contact-form" method="post" role="form">
-              <div class="messages"></div>
-              <div class="controls">
-                  <!-- first row -->
-                  <div class="row">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="form_sender" class="color_white">Sender *</label>
-                              <input id="form_sender" type="text" name="sender" class="form-control" placeholder="Please enter Sender Email *" required="required" data-error="Sender is required.">
-                              <div class="help-block with-errors"></div>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="form_receiver" class="color_white">Receiver *</label>
-                              <input id="form_receiver" type="text" name="receiver" class="form-control" placeholder="Please enter Receiver Email *" required="required" data-error="Receiver is required.">
-                              <div class="help-block with-errors"></div>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- second row -->
-                  <div class="row">
+            
+            <div class="messages"></div>
+            <div class="controls">
+                <!-- first row -->
+                <div class="row">
+                    <!-- sender field -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_sender" class="color_white">Sender *</label>
+                            <input id="form_sender" type="text" name="sender" class="form-control" placeholder="Please enter Sender Email *" required="required" data-error="Sender is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <!-- receiver field -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_receiver" class="color_white">Receiver *</label>
+                            <input id="form_receiver" type="text" name="receiver" class="form-control" placeholder="Please enter Receiver Email *" required="required" data-error="Receiver is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- second row -->
+                <div class="row">
+                    <!-- File field -->
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="form_file" class="color_white">File Attach</label>
                             <input id="form_file" type="file" name="email" class="form-control" placeholder="Attach your File">
                             <div class="help-block with-errors"></div>
                         </div>
-                    </div>  
+                    </div>
+                    <!-- inputAmount field  -->
                     <div class="col-md-6">
-                          <div class="form-group" name="inputAmountField">
-                            <label for="form_inputAmount" class="color_white">Input Amount *</label>
-                            <input id="form_inputAmount" type="number" name="inputAmount" class="form-control" placeholder="Input Amount" required="required" data-error="Input Amount is required.">
+                        <div class="form-group" name="feeAmountField">
+                            <label for="form_feeAmount" class="color_white" data-toggle="tooltip" data-placement="left" title="feeAmount minimum is 0.1">Fee Amount *</label>
+                            <input id="form_feeAmount" type="number" name="feeAmount" class="form-control" placeholder="Fee Amount" required="required" data-error="FeeAmount is required." tooltip="minimun is XX zen" value="1" min="0.1" data-toggle="tooltip" data-placement="left" title="feeAmount minimum is 0.1">
                             <div class="help-block with-errors"></div>
-                          </div>
-                      </div>
-                         
-                  </div>
-                  <!-- message box -->
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="form-group">
-                              <label for="form_message" class="color_white">Message *</label>
-                              <textarea id="form_message" name="message" class="form-control" placeholder="Message for Receiver *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
-                              <div class="help-block with-errors"></div>
-                          </div>
-                      </div>
-                      <div class="col-md-12">
-                          <input type="submit" class="btn btn-success btn-send" value="Send message" name="submitBtn">
-                      </div>
-                  </div>
-              </div>
-          </form> 
+                        </div>
+                    </div>     
+                </div>
+                <!-- message box -->
+                <div class="row">
+                    <!-- message field -->
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_message" class="color_white">Message *</label>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for Receiver *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <!-- button field -->
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-success btn-send" value="Send message" name="submitBtn">
+                    </div>
+                </div>
+                <!-- message box end -->
+            </div>
+            <!-- control end -->
+            </form> 
+            <!-- form end -->
         </div>
+        <!-- rwd ends -->
     </div>
+    <!-- main page end -->
   </div>
 </body>
 </html>

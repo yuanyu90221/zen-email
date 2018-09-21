@@ -15,18 +15,7 @@ const bindSubmit = () => {
   contactForm.onsubmit = (event) => {
     event.preventDefault();
     console.log('submit');
-    // console.log(event.target);
     let targetForm  = event.target;
-    // let elements = targetForm.elements;
-    // // elements.forEach(element=> {
-    // //   console.log(element);
-    // // });
-    // for (let i = 0 ; i < elements.length; i++) {
-    //   if (elements[i].type !=="submit") {
-    //     console.log(elements[i].name);
-    //     console.log(elements[i].value);
-    //   }
-    // }
     let result = formSerialize(targetForm);
     console.log(result);
   };
@@ -34,10 +23,10 @@ const bindSubmit = () => {
 
 const initFunction = () => {
   // let mailFormat = document.querySelectorAll("[name='mailFormat']");
-    let initNumber = document.querySelector("[name='inputAmount']");
+    let initNumber = document.querySelector("[name='feeAmount']");
     initNumber.disabled=true;
-    let inputAmountField = document.querySelector("[name='inputAmountField']");
-    inputAmountField.style= "display:none;";
+    let feeAmountField = document.querySelector("[name='feeAmountField']");
+    feeAmountField.style= "display:none;";
     // initNumber.style= "display:none;";
     let labels = document.getElementsByTagName('label');
     for (let i = 0 ; i < labels.length; i++) {
@@ -83,13 +72,13 @@ const changeLabelsByFormat = (emailFormat) => {
 const setupInputByFormat = (emailFormat) => {
   let form_sender = document.querySelector("#form_sender");
   let form_receiver = document.querySelector('#form_receiver');
-  let inputAmount = document.querySelector("[name='inputAmount']");
-  let inputAmountField = document.querySelector("[name='inputAmountField']");
+  let feeAmount = document.querySelector("[name='feeAmount']");
+  let feeAmountField = document.querySelector("[name='feeAmountField']");
    
   form_sender.placeholder = emailFormat == "normal"?"Please enter Sender Email*":"Please enter Sender Address";
   form_receiver.placeholder = emailFormat == "normal"?"Please enter Receiver Email*":"Please enter Receiver Address";
-  inputAmount.disabled = (emailFormat == "normal");
-  inputAmountField.style= (emailFormat == "normal")?"display:none;":"";
+  feeAmount.disabled = (emailFormat == "normal");
+  feeAmountField.style= (emailFormat == "normal")?"display:none;":"";
 };
 
 const setupBgByFormat = (emailFormat) => {
