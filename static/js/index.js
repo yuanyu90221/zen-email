@@ -44,10 +44,13 @@ document.onreadystatechange = function () {
           bodyInner.classList.add('background_black');
         }
         let head_titleInner = document.querySelector('[name=head_title]');
+        console.log(head_titleInner.innerHTML);
         if (emailFormat=="normal") {
           head_titleInner.classList.remove('color_white');
+          head_titleInner.innerHTML = "Normal Email";
         } else {
           head_titleInner.classList.add('color_white');
+          head_titleInner.innerHTML = "Zen Email";
         }
       });
     });
