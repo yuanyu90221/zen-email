@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap-grid.min.css"/>
+  <link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap-reboot.min.css"/>
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="static/js/index.js"></script>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
+  <title>Zen Mail</title>
+</head>
+<body class="background_black">
+  <!-- outer container -->
+  <div class="container">
+    <div class="row">
+        <div class="col-xl-8 offset-xl-2 py-5">
+            <p class="lead color_white" name="head_title">Zen Mail</p>
+            <div class="controls">
+                <label class="radio-inline color_white"><input class="marginLeft_5px" type="radio" name="mailFormat" checked value="normal">normal</label>
+                <label class="radio-inline color_white"><input class="marginLeft_5px" type="radio" name="mailFormat" value="crypto">crypto</label>
+            </div>
+            <form id="contact-form" method="post" role="form">
+              <div class="messages"></div>
+              <div class="controls">
+                  <!-- first row -->
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_sender" class="color_white">Sender *</label>
+                              <input id="form_sender" type="text" name="sender" class="form-control" placeholder="Please enter Sender Email *" required="required" data-error="Sender is required.">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_receiver" class="color_white">Receiver *</label>
+                              <input id="form_receiver" type="text" name="surname" class="form-control" placeholder="Please enter Receiver Email *" required="required" data-error="Receiver is required.">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- second row -->
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_inputAmount" class="color_white">Input Amount *</label>
+                            <input id="form_inputAmount" type="number" name="inputAmount" class="form-control" placeholder="Input Amount" required="required" data-error="Input Amount is required.">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_file" class="color_white">File Attach</label>
+                              <input id="form_file" type="file" name="email" class="form-control" placeholder="Attach your File">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>   
+                  </div>
+                  <!-- message box -->
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="form-group">
+                              <label for="form_message" class="color_white">Message *</label>
+                              <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <input type="submit" class="btn btn-success btn-send" value="Send message">
+                      </div>
+                  </div>
+              </div>
+          </form> 
+        </div>
+    </div>
+  </div>
+</body>
+</html>

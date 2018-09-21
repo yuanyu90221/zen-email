@@ -1,0 +1,22 @@
+{
+  "name": "ipfs-email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "bower": "bower",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-favicon": "^2.0.1"
+  },
+  "devDependencies": {
+    "bower": "^1.8.4",
+    "nodemon": "^1.18.4"
+  }
+}
