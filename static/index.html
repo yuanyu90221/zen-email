@@ -38,27 +38,28 @@
                       <div class="col-md-6">
                           <div class="form-group">
                               <label for="form_receiver" class="color_white">Receiver *</label>
-                              <input id="form_receiver" type="text" name="surname" class="form-control" placeholder="Please enter Receiver Email *" required="required" data-error="Receiver is required.">
+                              <input id="form_receiver" type="text" name="receiver" class="form-control" placeholder="Please enter Receiver Email *" required="required" data-error="Receiver is required.">
                               <div class="help-block with-errors"></div>
                           </div>
                       </div>
                   </div>
                   <!-- second row -->
                   <div class="row">
-                      <div class="col-md-6">
-                          <div class="form-group">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_file" class="color_white">File Attach</label>
+                            <input id="form_file" type="file" name="email" class="form-control" placeholder="Attach your File">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>  
+                    <div class="col-md-6">
+                          <div class="form-group" name="inputAmountField">
                             <label for="form_inputAmount" class="color_white">Input Amount *</label>
                             <input id="form_inputAmount" type="number" name="inputAmount" class="form-control" placeholder="Input Amount" required="required" data-error="Input Amount is required.">
                             <div class="help-block with-errors"></div>
                           </div>
                       </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="form_file" class="color_white">File Attach</label>
-                              <input id="form_file" type="file" name="email" class="form-control" placeholder="Attach your File">
-                              <div class="help-block with-errors"></div>
-                          </div>
-                      </div>   
+                         
                   </div>
                   <!-- message box -->
                   <div class="row">
