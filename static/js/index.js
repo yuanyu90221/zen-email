@@ -4,7 +4,7 @@ document.onreadystatechange = function () {
     let mailFormat = document.querySelectorAll("[name='mailFormat']");
     let initNumber = document.querySelector("[name='inputAmount']");
     initNumber.disabled=true;
-    initNumber.style= "display:none;";
+    // initNumber.style= "display:none;";
     let labels = document.getElementsByTagName('label');
     for (let i = 0 ; i < labels.length; i++) {
       console.log(labels[i].innerText);
@@ -26,7 +26,7 @@ document.onreadystatechange = function () {
         form_sender.placeholder = emailFormat == "normal"?"Please enter Sender Email*":"Please enter Sender Address";
         form_receiver.placeholder = emailFormat == "normal"?"Please enter Receiver Email*":"Please enter Receiver Address";
         inputAmount.disabled = (emailFormat == "normal");
-        inputAmount.style= (emailFormat == "normal")? "display:none;":"";
+        //inputAmount.style= (emailFormat == "normal")? "display:none;":"";
         let labels1 = document.getElementsByTagName('label');
         for (let i = 0 ; i < labels1.length; i++) {
           if (emailFormat == "normal") {
