@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap-reboot.min.css"/>
   <link rel="stylesheet" href="static/css/style.css">
-  <script src="static/js/index.js"></script>
   <script src="static/jquery/dist/jquery.min.js"></script>
+  <script src="static/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <!-- <script src="static/jquery/dist/jquery.min.js"></script> -->
   <!-- <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
   <title>Zen Mail</title>
 </head>
@@ -24,16 +27,16 @@
             <!-- nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#main" role="tab" data-toggle="tab">Send Mail</a>
+                    <a class="nav-link active" data-toggle="tab" href="#main" role="tab">Send Mail</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#receive" role="tab" data-toggle="tab">Receive Mail</a>
+                    <a class="nav-link" data-toggle="tab" href="#receive" role="tab">Receive Mail</a>
                 </li>
             </ul>
             <!-- tab-content start -->
             <div class="tab-content">
                 <!-- first tab main-->
-                <div role="tabpanel" class="tab-pane in active" id="main"> 
+                <div class="tab-pane container fade show active" id="main" role="tabpanel"> 
                     <!-- content head -->
                     <p class="lead color_white" name="head_title">Normal Mail</p>
                     <!-- radio groups start -->
@@ -106,7 +109,7 @@
                     </form>  
                     <!-- form end -->
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="receive"> 
+                <div class="tab-pane container fade" id="receive" role="tabpanel"> 
                     receive
                 </div>
                 <!-- first tab main end -->

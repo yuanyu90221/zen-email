@@ -16,6 +16,7 @@ app.use(favicon(path.join(__dirname,"static","images","favicon.ico")));
 app.get("/", (req, res)=> {
   res.sendFile(path.join(__dirname,"static","index.html"));
 });
+
 app.listen(PORT, ()=>{
   console.log(`server listen on ${PORT}`);
 });
