@@ -9,10 +9,14 @@ document.onreadystatechange = function () {
     bindSubmit();
   }
 }
-
+/**
+ * bindSubmit
+ * @description setup submit callback
+ */
 const bindSubmit = () => {
   let contactForm = document.querySelector('#contact-form');
   contactForm.onsubmit = (event) => {
+    //replace orginal form.submit
     event.preventDefault();
     console.log('submit');
     let targetForm  = event.target;
@@ -56,6 +60,7 @@ const bindRadios = () => {
       setupBgByFormat(emailFormat);
     });
   });
+  bindUpload();
 };
 
 const changeLabelsByFormat = (emailFormat) => {
@@ -95,6 +100,71 @@ const setupBgByFormat = (emailFormat) => {
   head_titleInner.innerHTML = emailFormat=="normal"?"Normal Email":"Zen Email";
 };
 
+const bindUpload = () => {
+  let form_file = document.querySelector('#form_file');
+  let files_list = document.querySelector('.files_list');
+  form_file.addEventListener('change', (e)=> {
+    console.log('changes');
+    // console.log(other);
+    form_file.classList.remove('zIndex_Minus');
+    if (!e.target.files || !window.FileReader) {
+      return;
+    }
+    // console.log('tempfiles',e.key);
+    files_list.innerHTML ="";
+    let files = e.target.files;
+    let filesArr = Array.prototype.slice.call(files);
+    if (filesArr.length == 0) {
+      files_list.innerHTML ="please attach files";
+    }
+    // let reader = new FileReader();
+    // reader.onload = function(re) {
+    //   let html = `<span>${re.target.result} - ${re}</span>`
+    // };
+    // console.log(filesArr);
+    // if (filesArr.length > 0) {
+    //   form_file.classList.add('zIndex_Minus');
+    // }
+    // else {
+    //   form_file.classList.remove('zIndex_Minus');
+    // }
+    filesArr.forEach((f, index)=>{
+      let file = files[index];
+      let reader = new FileReader();
+      reader.onload = function(re) {
+        let size = Number(file.size/(1024*1024)).toFixed(5);
+        let html = `<div id="file${index}">${file.name} - ${size} kB</div>`;
+        files_list.innerHTML += html;
+      };
+      reader.readAsDataURL(f);
+    });
+  });
+};
+// const removeFile = (index) => {
+//   console.log(index);
+//   let form_file = document.querySelector('#form_file');
+//   let files_list = document.querySelector('.files_list');
+//   let files = form_file.files;
+//   console.log('removefile' ,files);
+//   let tempfiles = Array.prototype.slice.call(files);
+//   console.log(tempfiles);
+//   console.log(tempfiles.splice(index,0));
+//   // form_file.value = tempfiles;
+//   // console.log(form_file.value);
+//   let event = new CustomEvent("change", {'key':tempfiles});
+//   // console.log($('#form_file').value);
+//   form_file.dispatchEvent(event);
+//   // form_file.onchange({target: form_file});
+//   form_file = document.querySelector('#form_file');
+//   console.log(form_file.files);
+//   // files_list.removeChild(document.querySelector(`#file${index}`));
+// };
+/**
+ * formSerialize 
+ * @description turn form data to jsons
+ * 
+ * @param {object} form 
+ */
 const formSerialize = (form)=> {
   if (!form||!form.elements) {
     return null;

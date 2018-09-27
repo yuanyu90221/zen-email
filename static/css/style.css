@@ -20,3 +20,26 @@
 background {
   transition-duration: 2000ms;
 }
+input[type="file"] {
+  opacity: 0;
+  position: absolute;
+}
+.files_list {
+  border-radius: 3px;
+  border: 1px solid gainsboro;
+  color:  rgb(126, 122, 122);
+  min-height: 2.5em;
+  /* max-height: 2.5em; */
+  background: white;
+  display: flex;
+  padding-left: 1em;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: .5em;
+  /* align-items: center; */
+  overflow-y: scroll;
+}
+
+.zIndex_Minus {
+  z-index: -2;
+}

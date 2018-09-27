@@ -77,9 +77,12 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form_file" class="color_white">File Attach</label>
+                                        
                                         <input id="form_file" type="file" name="email" class="form-control" 
                                         placeholder="Attach your File" multiple accept="image/*,.pdf,.mp4,.txt,.zip" draggable="true">
+                                        <div class="files_list" name="files_list">Please attach your file*</div>
                                         <div class="help-block with-errors"></div>
+                                        
                                     </div>
                                 </div>
                                 <!-- inputAmount field  -->
@@ -114,8 +117,11 @@
                 </div>
                 <!-- first tab main end -->
                 <!-- second tab -->
-                <div class="tab-pane container fade" id="receive" role="tabpanel"> 
-                    <p class="lead" name="head_title_receive">Receive Mail</p>
+                <div class="tab-pane container fade" id="receive" role="tabpanel">
+                    <div class="controls"> 
+                        <p class="lead" name="head_title_receive">Receive Mail</p>
+
+                    </div>
                 </div>
                 <!-- second tab end -->
             </div>
