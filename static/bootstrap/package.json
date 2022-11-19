@@ -97,7 +97,7 @@
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.52",
+    "@babel/cli": "7.19.3",
     "@babel/core": "7.0.0-beta.52",
     "@babel/preset-env": "7.0.0-beta.52",
     "autoprefixer": "^10.4.13",
@@ -134,7 +134,7 @@
     "shx": "^0.3.1",
     "sinon": "^6.1.2",
     "sri-toolbox": "^0.2.0",
-    "stylelint": "^9.3.0",
+    "stylelint": "^14.15.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^5.0.0",
